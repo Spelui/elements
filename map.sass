@@ -1,0 +1,163 @@
+//-------html------------
+<div id="map"></div>
+
+//------css-----------
+#map
+  height: 400px
+
+//-------js потрібно полюбому вставляти на сторінці бо небуде відпрацьовувати--------------
+    <script>
+      function initMap() {
+        var uluru = {lat: 34.9307386, lng: 33.6249393};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru,
+          styles: [
+        {
+            "featureType": "administrative",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "saturation": "-100"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.province",
+            "elementType": "all",
+            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 65
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": "50"
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": "-100"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "lightness": "30"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "lightness": "40"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "hue": "#ffff00"
+                            },
+                            {
+                                "lightness": -25
+                            },
+                            {
+                                "saturation": -97
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "lightness": -25
+                            },
+                            {
+                                "saturation": -100
+                            }
+                        ]
+                    }
+                        ]
+        });
+
+
+          var marker = new google.maps.Marker({
+            position: {lat: 34.9307386, lng: 33.6249393},
+            map: map,
+            // icon: 'img/mark.png'
+          });
+
+         var contentString = '<div id="content" class="map__content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h4 id="firstHeading" class="firstHeading map__title">Alexandrou Panagouli 1, ofce 101, <br>Larnaca 6057, Novel Tower, Cyprus</span></h4>'+
+          '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+                content: contentString
+              });
+
+              infowindow.open(map, marker);
+
+          }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>
