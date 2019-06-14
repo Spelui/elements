@@ -1,4 +1,25 @@
-		<!--modal -->
+<form action="sendmail.php" class="form hero__form" method="post">
+
+	<h3>Закажите анализ <br>материалов Вашего дела</h3>
+	<p>Узнайте, что нужно предпринять, <br>чтобы <b>достичь</b> желаемого <b>результата</b></p>
+	<input type="hidden" name="subject" value="Узнать подробнее!">
+	<div class="">
+		<input type="text" name="name" placeholder="Введите Ваше имя" required>
+	</div>
+	<div class="">
+		<input type="tel" name="phone" required placeholder="Введите Ваш телефон">
+	</div>
+	<div class="">
+		<input type="email" name="email" required placeholder="Введите Ваш Email">
+	</div>
+	<div>
+		<button type="submit" class="btn btn--form" name="submit">Заказать</button>
+	</div>
+
+</form>
+
+
+		<!--modal --> <!--шо б відкрити модалку в класі кнопкі пишем id модалкі+open наприклад order_open --> 
 	<div class="modal" id="order">
 		<div class="wrapper">
 			<form action="sendmail.php" class="form form-2" method="post">

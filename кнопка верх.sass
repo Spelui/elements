@@ -1,0 +1,27 @@
+	.footer__up click // клас елемента с правилом бема
+		position: absolute
+		top: 0
+		right: 0
+		background-color: #fff
+		width: 40px
+		height: 40px
+
+		a
+			position: absolute
+			left: 50%
+			top: 50%
+			display: block
+			width: 20px
+			height: 20px
+			border-top: 4px solid #273c57
+			border-left: 4px solid #273c57
+			transform: translate(-50%,0) rotate(45deg)
+			transition: all .6
+
+			&::before
+				display: none
+
+			&:hover,
+			&:focus
+				transform: translate(-50%, -50%) rotate(45deg)
+				text-decoration: none

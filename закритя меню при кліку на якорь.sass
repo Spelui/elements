@@ -1,0 +1,49 @@
+  //--------------------закриття меню при кліку на ссилку якоря--------------------
+      $('.hamburger').removeClass('hamburger--active');
+      $('.header-menu').removeClass('header-menu');
+      $('.header--active').removeClass('header--active');
+      $('.nav--active').removeClass('nav--active');
+
+      $( '.nav a' ).on("click", function(){
+      $('.hamburger--active').removeClass('hamburger--active');
+      $('.header-menu').removeClass('header');
+      $('.header--active').removeClass('header--active');
+      $('.nav--active').removeClass('nav--active');
+      });
+
+
+
+//----html----------------------
+<header class="header">
+      <div class="container header__container">
+
+            <div class="header__contacts">
+                  <div class="header__contacts_mail">
+                        <img src="img/mail_icon.png" alt="alt">
+                        <a href="mail:hello@firm.com" class="top_line__contacts_mail">hello@firm.com</a>
+                  </div>
+                  <div class="header__contacts_tel">
+                        <img src="img/tel_icon.png" alt="alt">
+                        <a href="tel:+74955051749">+7(495) 505 1749</a>
+                        <span><br>Круглосуточно</span>
+                  </div>
+            </div>
+
+            <button class="hamburger" type="button"> 
+                  <span class="hamburger__box">
+                        <span class="hamburger__item"></span>
+                  </span>
+            </button>
+
+            <nav class="nav header__nav"> // нав не меняем
+                  <ul> //добавляем перед силкой клас клік
+                        <li class="click"><a href="#hero">Главная</a></li>
+                        <li class="click"><a href="#servicec">Услуги</a></li>
+                        <li class="click"><a href="#about">Об адвокате</a></li>
+                        <li class="click"><a href="#contacts">Контакты</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                  </ul>
+            </nav>
+
+      </div>
+</header>

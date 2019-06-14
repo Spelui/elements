@@ -1,0 +1,27 @@
+//------------------slideToggle---------------------
+
+//---------------- Html------------
+<ul class="mc_wrap"> // in children
+
+	<li class="mc_item_wrap"> // ище один родительський елемент parent()
+
+		<div class="mc_item"> // родительський елемент parent()
+			
+			<div class="mc_toggle"></div> // Toqqle
+
+		</div>
+
+	</li>
+
+</ul> 
+
+//-----------------end html----------------
+
+//--------css------------
+//---------------js-------------------
+
+	$(".mc_toggle").click(function(){
+		$(this).parent().parent().children("ul").slideToggle();
+	});
+
+//------------end js---------------

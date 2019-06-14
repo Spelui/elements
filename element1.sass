@@ -8,24 +8,25 @@
     border: 1px solid #acd0e5
     z-index: -1
 
-    ::before //линия от елемента (просто прямая линия)
+&::before //линия от елемента (просто прямая линия)
     content: ''
     position: absolute
     right: 105%
     top: 50%
-    -webkit-transform: translate(0,-50%)
-    -ms-transform: translate(0,-50%)
     transform: translate(0,-50%)
     width: 80%
     height: 1px
     background: #f75d2b
 
-	&::before //рамка под елемю(збоку елемента)
-		top: 0
-		bottom: 0
-		right: 0
-		width: 50%
-		border: 5px solid #f75d2b
+	&::before //рамка под елем.(збоку елемента)
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        width: 40%
+        border: 1px solid #f75d2b
+        z-index: 0
+
 .title__about::after, .title__about::before 
 	content: ''
 	position: absolute
@@ -83,3 +84,34 @@ span // создає блок шось вроди рисок зверху і з�
     &::after // позиція другой картинки
         top: 30%
         left: 50%
+
+<h2 data-title="Лучшие места" class="wow bounceInUp" data-wow-duration="1s">Места для отдыха</h2>
+    h2 //задній план текст с дати тайтл і передній (места для одиха)
+        color: #04183f
+        font-size: 60px
+        font-weight: 900
+        z-index: 2
+        position: relative
+
+        &::before
+            content: attr(data-title)
+            display: block
+            position: absolute
+            right: 0
+            left: 0
+            text-shadow: 10px 17px 30px rgba(4, 24, 63, 0.2)
+            color: #ffffff
+            font-size: 128px
+            font-weight: 900
+            z-index: -1
+            margin: 0 auto
+
+
+
+&::before // трикутник можна крутить в різні сторони змінуючи бордер
+    content: ''
+    border: 20px solid transparent
+    border-top-color: #fff
+    position: absolute
+    top: 20px
+    right: -15px
