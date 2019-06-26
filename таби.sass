@@ -1,3 +1,40 @@
+//-------------Rydolf--------------
+//------------------------html-----------------------
+<ul>
+  <li><a href="#one">Колледж</a></li>
+  <li><a href="#two">Высшее бакалавриат</a></li>
+  <li><a href="#three">Высшее магистратура</a></li>
+  <li><a href="#four">Профессиональная переподготовка</a></li>
+  <li><a href="#five">Повышение квалификации</a></li>
+</ul>
+ <div id="one" class="tabs__wrap"></div>
+<div id="two" class="tabs__wrap"></div>
+<div id="three" class="tabs__wrap"></div>
+<div id="four" class="tabs__wrap"></div>
+<div id="five" class="tabs__wrap"></div>
+ //--------------------------sass----------------------
+.active
+  стилізувати цей клас під себе
+
+
+//---------------------------js-----------------------
+$('.tabs__wrap').hide();
+$('.tabs__wrap:first').show();
+$('.tabs ul a:first').addClass('active');
+ $('.tabs ul a').click(function(event){
+  event.preventDefault();
+  $('.tabs ul a').removeClass('active');
+  $(this).addClass('active');
+  $('.tabs__wrap').hide();
+   var selectTab = $(this).attr('href');
+  $(selectTab).fadeIn();
+});
+
+
+
+
+//---------------internet-----------------
+
 //----------html------------------
 
 <div id="tabs">
