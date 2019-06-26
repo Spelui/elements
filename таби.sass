@@ -1,0 +1,47 @@
+//----------html------------------
+
+<div id="tabs">
+    <!-- Кнопки -->
+    <ul class="tabs-nav">
+        <li><a href="#tab-1">Вкладка №1</a></li>
+        <li><a href="#tab-2">Вкладка №2</a></li>
+        <li><a href="#tab-3">Вкладка №3</a></li>
+    </ul>    
+    
+    <!-- Контент -->
+    <div class="tabs-list">
+        <div class="tabs-item" id="tab-1">
+            <strong>Текст вкладки №1</strong>
+        </div>
+        <div class="tabs-item" id="tab-2">
+            <strong>Текст вкладки №2</strong>
+        </div>
+        <div class="tabs-item" id="tab-3">
+            <strong>Текст вкладки №3</strong>
+        </div>        
+    </div>
+</div>
+
+//----------html end------------------
+
+//<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script> //верх не обзтален....скрипт кидаем в  comon
+$(function() {
+    var tab = $('#tabs .tabs-list > div'); 
+    tab.hide().filter(':first').show(); 
+    
+    // Клики по вкладкам.
+    $('#tabs .tabs-nav a').click(function(){
+        tab.hide(); 
+        tab.filter(this.hash).show(); 
+        $('#tabs .tabs-nav a').removeClass('active');
+        $(this).addClass('active');
+        return false;
+    }).filter(':first').click();
+
+    // Клики по якорным ссылкам.
+    $('.tabs-target').click(function(){
+        $('#tabs .tabs-nav a[href=' + $(this).data('id')+ ']').click();
+    });
+});
+</script>
