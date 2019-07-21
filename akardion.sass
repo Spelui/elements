@@ -39,3 +39,41 @@
       </p>
     </div>
 </div>
+
+
+
+//------------------------------acardeon---------------------------
+
+  $(".answer__dropdown").slideUp("slow");
+  $(".answer__item").first('').addClass('active');
+  $(".active .answer__dropdown").slideDown("slow");
+
+  $(".answer__header").on("click", function(){
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(".answer__dropdown").slideUp("slow");
+    }
+    else {
+      $(".active .answer__dropdown").slideUp("slow");
+      $(".active").removeClass('active');
+      $(this).parent().addClass('active');
+      $(".active .answer__dropdown").slideDown("slow");
+    }
+  });
+
+
+        <div class="answer__list"> //----.active
+        
+          <div class="answer__item">
+
+            <div class="answer__header">
+              <p></p>
+              <div class="answer__header_change"></div>
+            </div>
+
+            <div class="answer__dropdown">
+            </div>
+
+          </div><!--ensver__item--->
+
+        </div>

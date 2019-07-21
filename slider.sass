@@ -1,0 +1,134 @@
+<!-----slider------->
+
+<div class="swiper-container works__slider">
+	<div class="swiper-wrapper">
+
+		<div class="swiper-slide">
+			<img src="img/reviews1.png" alt="">
+			<a href="img/reviews1.png" data-fancybox="gallery"><img src="img/hover.png" alt="" class="works__hover"></a>
+		</div>
+
+		<div class="swiper-slide">
+			<img src="img/reviews2.png" alt="">
+			<a href="img/reviews2.png" data-fancybox="gallery"><img src="img/hover.png" alt="" class="works__hover"></a>
+		</div>
+
+		<div class="swiper-slide">
+			<img src="img/reviews3.png" alt="">
+			<a href="img/reviews3.png" data-fancybox="gallery"><img src="img/hover.png" alt="" class="works__hover"></a>
+		</div>
+
+		<div class="swiper-slide">
+			<img src="img/reviews4.png" alt="">
+			<a href="img/reviews4.png" data-fancybox="gallery"><img src="img/hover.png" alt="" class="works__hover"></a>
+		</div>
+
+		<div class="swiper-slide">
+			<img src="img/reviews5.png" alt="">
+			<a href="img/reviews5.png" data-fancybox="gallery"><img src="img/hover.png" alt="" class="works__hover"></a>
+		</div>
+
+	</div>
+
+	<div class="swiper-pagination works__prev"></div>
+</div>
+
+<!----js------>
+
+  var swiper = new Swiper('.works__slider', {
+    freeMode: true,
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 50,
+    // init: false,
+    pagination: {
+      el: '.works__prev',
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      }
+    }
+  });
+
+<!----------------------end--------------->
+
+<!---------otzuvu-slider----------->
+
+<div class="reviews__title"><h2>Отзывы наших учеников</h2></div>
+			
+<div class="swiper-container reviews__slider">
+	<div class="swiper-wrapper">
+
+		<div class="swiper-slide reviews__slide">
+
+			<b>""</b>
+			<p>Большое спасибо за столь подробные уроки! Цветными карандашами рисую около 2-х лет, но тем не менее узнала много нового, а практические задания помогли лучше понять материал</p>
+			<div>
+				<p>Алиса <time datetime="2018-07-24">24/07/2018</time></p>
+				<img src="img/alisa.png" alt="">
+			</div>
+
+		</div>
+
+		<div class="swiper-slide reviews__slide">
+
+			<b>""</b>
+			<p>Большое спасибо за столь подробные уроки! Цветными карандашами рисую около 2-х лет, но тем не менее узнала много нового, а практические задания помогли лучше понять материал</p>
+			<div>
+				<p>Алиса <time datetime="2018-07-24">24/07/2018</time></p>
+				<img src="img/alisa.png" alt="">
+			</div>
+
+		</div>
+
+		<div class="swiper-slide reviews__slide">
+
+			<b>""</b>
+			<p>Большое спасибо за столь подробные уроки! Цветными карандашами рисую около 2-х лет, но тем не менее узнала много нового, а практические задания помогли лучше понять материал</p>
+			<div>
+				<p>Алиса <time datetime="2018-07-24">24/07/2018</time></p>
+				<img src="img/alisa.png" alt="">
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="swiper-pagination"></div>
+
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+
+</div>
+
+
+	<!----js------>
+
+  var swiper = new Swiper('.reviews__slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 50,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  });
